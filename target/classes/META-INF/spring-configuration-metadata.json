@@ -1,0 +1,28 @@
+{
+  "groups": [
+    {
+      "name": "springdoc",
+      "type": "py.com.jaha.api.establishments.domain.models.commons.OpenApiDTO",
+      "sourceType": "py.com.jaha.api.establishments.config.OpenApiConfig",
+      "sourceMethod": "springDoc()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "springdoc.description",
+      "type": "java.lang.String",
+      "sourceType": "py.com.jaha.api.establishments.domain.models.commons.OpenApiDTO"
+    },
+    {
+      "name": "springdoc.title",
+      "type": "java.lang.String",
+      "sourceType": "py.com.jaha.api.establishments.domain.models.commons.OpenApiDTO"
+    },
+    {
+      "name": "springdoc.version",
+      "type": "java.lang.String",
+      "sourceType": "py.com.jaha.api.establishments.domain.models.commons.OpenApiDTO"
+    }
+  ],
+  "hints": []
+}
