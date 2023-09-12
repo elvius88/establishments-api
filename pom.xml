@@ -22,10 +22,9 @@
         <docker.registry>core.harbor.work.py.igrupobbva</docker.registry>
         <docker.image.name>${project.artifactId}</docker.image.name>
         <!--suppress UnresolvedMavenProperty -->
-<!--        <docker.image.tag>v${project.version}-${git.commit.id.abbrev}-${maven.build.timestamp}</docker.image.tag>-->
+        <docker.image.tag>v${project.version}-${git.commit.id.abbrev}-${maven.build.timestamp}</docker.image.tag>
         <maven.build.timestamp.format>yyyyMMdd'T'HHmmss'Z'</maven.build.timestamp.format>
         <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
-        <api.audit.version>1.6.2</api.audit.version>
     </properties>
 
     <dependencies>
@@ -326,28 +325,28 @@
                     </buildArgs>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>pl.project13.maven</groupId>-->
-<!--                <artifactId>git-commit-id-plugin</artifactId>-->
-<!--                <version>4.0.4</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>get-the-git-infos</id>-->
-<!--                        <goals>-->
-<!--                            <goal>revision</goal>-->
-<!--                        </goals>-->
-<!--                        <phase>initialize</phase>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <verbose>false</verbose>-->
-<!--                    <includeOnlyProperties>-->
-<!--                        <includeOnlyProperty>^git.build.(time|version)$</includeOnlyProperty>-->
-<!--                        <includeOnlyProperty>^git.commit.id.(abbrev|full)$</includeOnlyProperty>-->
-<!--                    </includeOnlyProperties>-->
-<!--                    <commitIdGenerationMode>full</commitIdGenerationMode>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+                <version>4.0.4</version>
+                <executions>
+                    <execution>
+                        <id>get-the-git-infos</id>
+                        <goals>
+                            <goal>revision</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <verbose>false</verbose>
+                    <includeOnlyProperties>
+                        <includeOnlyProperty>^git.build.(time|version)$</includeOnlyProperty>
+                        <includeOnlyProperty>^git.commit.id.(abbrev|full)$</includeOnlyProperty>
+                    </includeOnlyProperties>
+                    <commitIdGenerationMode>full</commitIdGenerationMode>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
